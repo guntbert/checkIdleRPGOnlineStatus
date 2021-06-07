@@ -9,7 +9,8 @@ def get_xml():
 
 def run_check():
     soup = BeautifulSoup(get_xml(), 'xml')
-    print(soup.prettify())
+    status = soup.find('online').get_text()
+    print(status)
 
 if __name__ == '__main__':
     run_check()
