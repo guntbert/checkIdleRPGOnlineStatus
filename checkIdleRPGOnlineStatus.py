@@ -8,10 +8,13 @@ def get_xml():
     return response.text
 
 def run_check():
+    name = 'heisenbug'
     soup = BeautifulSoup(get_xml(), 'xml')
     status = soup.find('online').get_text()
-    print(status)
-
+    if status == '1':
+        print(f'All is well. {name} is online')
+    else:
+        print(f'ALERT! {name} is OFFLINE!')
 if __name__ == '__main__':
     run_check()
 
