@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 def get_xml():
     url = 'https://idlerpg.lolhosting.net/xml.php?player=heisenbug'
     response = requests.get(url)
-    return response
+    return response.text
 
 def run_check():
     soup = BeautifulSoup(get_xml())
