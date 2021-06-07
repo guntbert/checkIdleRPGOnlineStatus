@@ -8,8 +8,9 @@ def get_xml():
     return response.text
 
 def run_check():
-    soup = BeautifulSoup(get_xml())
-    soup.prettify()
+    soup = BeautifulSoup(get_xml(), 'xml')
+    print(soup.prettify())
+
 if __name__ == '__main__':
     run_check()
 
