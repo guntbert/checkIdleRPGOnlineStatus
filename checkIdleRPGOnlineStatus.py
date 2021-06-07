@@ -10,7 +10,7 @@ def get_xml():
 def run_check():
     soup = BeautifulSoup(get_xml())
     soup.prettify()
-if __name__ == __main__:
+if __name__ == '__main__':
     run_check()
 
 
